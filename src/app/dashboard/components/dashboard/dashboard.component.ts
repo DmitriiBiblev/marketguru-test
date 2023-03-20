@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SellersService } from '../../services';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,5 +8,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent {
-
+  constructor(
+    private sellersService: SellersService,
+  ) {
+    sellersService
+      .getSellers()
+      .subscribe(q => console.log(q));
+  }
 }
