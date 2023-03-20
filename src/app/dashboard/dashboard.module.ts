@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './components';
 import { SellersService } from './services';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { DashboardEffects, dashboardReducer, featureKey } from './store';
 
 
 @NgModule({
@@ -13,6 +16,8 @@ import { SellersService } from './services';
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    StoreModule.forFeature(featureKey, dashboardReducer),
+    EffectsModule.forFeature([DashboardEffects]),
   ],
   providers: [
     SellersService,
