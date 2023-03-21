@@ -5,6 +5,10 @@
       <app-label>Рейтинг Wildberries</app-label>
       <app-select [value]='1' [options]='[{name: "1",id:1},{name: "2",id:2}]'></app-select>
     </app-form-field>
+    <app-form-field>
+      <app-label>Рейтинг Wildberries</app-label>
+      <input app-input type='text'>
+    </app-form-field>
   </div>
   <div class='filters'>
     <h2 class='filters__title'>Сортировка</h2>
@@ -50,7 +54,7 @@
   </div>
   <div class='pagination'>
     <button>Предыдущая</button>
-    <span>1</span>
+    <span class='page'>1</span>
     <button>Следующая</button>
   </div>
 </div>

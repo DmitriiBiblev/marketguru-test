@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { DashboardEffects, dashboardReducer, featureKey } from './store';
 import { SelectModule } from '../shared/components/select/select.module';
+import { InputModule } from '../shared/components/input/input.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SelectModule } from '../shared/components/select/select.module';
     StoreModule.forFeature(featureKey, dashboardReducer),
     EffectsModule.forFeature([DashboardEffects]),
     SelectModule,
+    InputModule,
   ],
   providers: [
     SellersService,
