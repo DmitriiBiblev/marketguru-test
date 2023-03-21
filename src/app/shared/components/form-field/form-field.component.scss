@@ -1,0 +1,30 @@
+.app-form-field {
+  display: block;
+  position: relative;
+
+  & .label {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    color: var(--color-1);
+    margin-bottom: .4rem;
+  }
+
+  & .wrapper {
+    height: 4rem;
+    background: var(--color-1);
+    border: .1rem solid var(--color-1);
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    transition: border-color .2s;
+    position: relative;
+  }
+
+  & .infix {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+}
