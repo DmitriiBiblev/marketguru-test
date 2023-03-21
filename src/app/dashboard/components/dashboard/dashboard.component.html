@@ -1,3 +1,56 @@
-<div *ngFor='let item of sellers$ | async'>
-  {{item.id}}
+<div class='sidebar'>
+  <div class='filters'>
+    <h2 class='filters__title'>Фильтры</h2>
+    <app-form-field>
+      <app-label>Рейтинг Wildberries</app-label>
+      <app-select [value]='1' [options]='[{name: "1",id:1},{name: "2",id:2}]'></app-select>
+    </app-form-field>
+  </div>
+  <div class='filters'>
+    <h2 class='filters__title'>Сортировка</h2>
+    <app-form-field>
+      <app-label>Поле сортировки</app-label>
+      <app-select [value]='1' [options]='[{name: "1",id:1},{name: "2",id:2}]'></app-select>
+    </app-form-field>
+    <app-form-field>
+      <app-label>Тип сортировки</app-label>
+      <app-select [value]='1' [options]='[{name: "1",id:1},{name: "2",id:2}]'></app-select>
+    </app-form-field>
+  </div>
+</div>
+<div class='content'>
+  <h2>Данные</h2>
+  <div class='table'>
+    <div class='cell header'>
+      Имя
+    </div>
+    <div class='cell header'>
+      Название бренда
+    </div>
+    <div class='cell header'>
+      Рейтинг Wildberries
+    </div>
+    <div class='cell right header'>
+      Количество просмотров
+    </div>
+    <ng-container *ngFor='let seller of sellers$ | async'>
+      <div class='cell'>
+        {{seller.name}}
+      </div>
+      <div class='cell'>
+        {{seller.brandName}}
+      </div>
+      <div class='cell'>
+        {{seller.wbRating}}
+      </div>
+      <div class='cell right'>
+        {{seller.reviewsCount}}
+      </div>
+    </ng-container>
+  </div>
+  <div class='pagination'>
+    <button>Предыдущая</button>
+    <span>1</span>
+    <button>Следующая</button>
+  </div>
 </div>

@@ -21,6 +21,12 @@ html {
   font-size: var(--html-font-size);
 }
 
+app-root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 0 1fr;
+}
+
 * {
   font-family: var(--font-family);
 }
