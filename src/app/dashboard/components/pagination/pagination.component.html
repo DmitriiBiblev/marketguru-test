@@ -1,3 +1,15 @@
-<button>Предыдущая</button>
-<span class='page'>1</span>
-<button>Следующая</button>
+<button
+  [disabled]='page === 1'
+  (click)='onPrevPage()'
+>
+  Предыдущая
+</button>
+<span class='page'>
+  {{page}}
+</span>
+<button
+  [disabled]='page === maxPages'
+  (click)='onNextPage()'
+>
+  Следующая
+</button>
