@@ -24,7 +24,7 @@ export class SelectComponent implements FormFieldControlDirective<string | numbe
   @Input() placeholder!: string;
 
   @Input()
-  get value(): string | number | number[] | null {
+  get value(): string | number | null {
     return this._value;
   }
 

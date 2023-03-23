@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { DashboardEffects, dashboardReducer, featureKey } from './store';
 import { InputModule, SelectModule } from '../shared/components';
 import { DashboardContainerComponent } from './containers';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { DashboardContainerComponent } from './containers';
     EffectsModule.forFeature([DashboardEffects]),
     SelectModule,
     InputModule,
+    ReactiveFormsModule,
   ],
   providers: [
     SellersService,
