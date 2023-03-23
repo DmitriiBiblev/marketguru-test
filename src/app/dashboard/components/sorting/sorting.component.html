@@ -1,9 +1,20 @@
 <h2>Сортировка</h2>
-<app-form-field>
-  <app-label>Поле сортировки</app-label>
-  <app-select [value]='1' [options]='[{name: "1",id:1},{name: "2",id:2}]'></app-select>
-</app-form-field>
-<app-form-field>
-  <app-label>Тип сортировки</app-label>
-  <app-select [value]='1' [options]='[{name: "1",id:1},{name: "2",id:2}]'></app-select>
-</app-form-field>
+<form class='form' [formGroup]='form' (ngSubmit)='handleSubmit()'>
+  <app-form-field>
+    <app-label>Поле сортировки</app-label>
+    <app-select
+      formControlName='field'
+      [options]='sortingFields'
+      placeholder='Выберите значение...'
+    ></app-select>
+  </app-form-field>
+  <app-form-field>
+    <app-label>Тип сортировки</app-label>
+    <app-select
+      formControlName='type'
+      [options]='sortingTypes'
+      placeholder='Выберите значение...'
+    ></app-select>
+  </app-form-field>
+  <button [disabled]='form.invalid'>Применить</button>
+</form>

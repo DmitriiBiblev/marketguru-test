@@ -66,6 +66,8 @@ button {
   }
 
   &:disabled {
+    background: var(--color-6);
     opacity: .3;
+    cursor: default;
   }
 }
