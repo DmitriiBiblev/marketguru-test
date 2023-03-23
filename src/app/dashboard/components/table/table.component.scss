@@ -1,0 +1,25 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cell {
+  font-size: 1.6rem;
+  color: var(--color-4);
+  text-align: center;
+  background: var(--color-1);
+  border-bottom: .2rem solid var(--color-5);
+  border-left: .2rem solid var(--color-5);
+
+  &.right {
+    border-right: .2rem solid var(--color-5);
+  }
+
+  &.header {
+    font-weight: 700;
+    color: var(--color-1);
+    background: var(--color-6);
+    padding: .8rem;
+    border-top: .2rem solid var(--color-5);
+  }
+}

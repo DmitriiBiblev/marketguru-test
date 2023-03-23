@@ -2,18 +2,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './components';
+import {
+  FiltersComponent,
+  PaginationComponent,
+  SortingComponent,
+  TableComponent,
+} from './components';
 import { SellersService } from './services';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { DashboardEffects, dashboardReducer, featureKey } from './store';
-import { SelectModule } from '../shared/components/select/select.module';
-import { InputModule } from '../shared/components/input/input.module';
+import { InputModule, SelectModule } from '../shared/components';
+import { DashboardContainerComponent } from './containers';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent,
+    FiltersComponent,
+    SortingComponent,
+    TableComponent,
+    PaginationComponent,
+    DashboardContainerComponent,
   ],
   imports: [
     CommonModule,

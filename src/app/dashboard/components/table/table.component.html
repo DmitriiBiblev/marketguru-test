@@ -1,0 +1,26 @@
+<div class='cell header'>
+  Имя
+</div>
+<div class='cell header'>
+  Название бренда
+</div>
+<div class='cell header'>
+  Рейтинг Wildberries
+</div>
+<div class='cell right header'>
+  Количество просмотров
+</div>
+<ng-container *ngFor='let seller of sellers'>
+  <div class='cell'>
+    {{seller.name}}
+  </div>
+  <div class='cell'>
+    {{seller.brandName}}
+  </div>
+  <div class='cell'>
+    {{seller.wbRating}}
+  </div>
+  <div class='cell right'>
+    {{seller.reviewsCount}}
+  </div>
+</ng-container>

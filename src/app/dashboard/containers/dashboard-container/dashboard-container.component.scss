@@ -1,0 +1,22 @@
+:host {
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content {
+  background: var(--color-7);
+  padding: 2rem 1.6rem;
+  border-radius: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex-grow: 1;
+}

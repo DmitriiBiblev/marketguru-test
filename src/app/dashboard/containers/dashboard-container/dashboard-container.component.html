@@ -1,0 +1,9 @@
+<div class='sidebar'>
+  <app-filters></app-filters>
+  <app-sorting></app-sorting>
+</div>
+<div class='content'>
+  <h2>Данные</h2>
+  <app-table [sellers]='sellers$ | async'></app-table>
+  <app-pagination></app-pagination>
+</div>

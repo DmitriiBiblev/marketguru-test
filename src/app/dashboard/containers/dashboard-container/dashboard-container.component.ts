@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { getSellers, IState, selectSellers } from '../../store';
-import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { ISeller } from '../../interfases';
+import { Store } from '@ngrx/store';
+import { getSellers, IState, selectSellers } from '../../store';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-dashboard-container',
+  templateUrl: './dashboard-container.component.html',
+  styleUrls: ['./dashboard-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardComponent implements OnInit {
+export class DashboardContainerComponent implements OnInit {
   sellers$: Observable<ISeller[]>;
 
   constructor(
