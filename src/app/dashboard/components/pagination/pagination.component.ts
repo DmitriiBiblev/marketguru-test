@@ -7,18 +7,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PaginationComponent {
-  page: number = 1;
-
-  @Input() maxPages!: number;
+  @Input() currentPage: number | null = 1;
+  @Input() maxPages!: number | null;
   @Output() onChangePage: EventEmitter<number> = new EventEmitter<number>();
-
-  onPrevPage() {
-    this.page -= 1;
-    this.onChangePage.emit(this.page);
-  }
-
-  onNextPage() {
-    this.page += 1;
-    this.onChangePage.emit(this.page);
-  }
 }

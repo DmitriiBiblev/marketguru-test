@@ -21,7 +21,7 @@ export class FiltersComponent {
   ) {
     //опустил проверки ошибок и их отображение
     this.form = _fb.group({
-      wbRating: null,
+      wbRating: 'all',
       minReviewsCount: null,
       maxReviewsCount: null,
     });

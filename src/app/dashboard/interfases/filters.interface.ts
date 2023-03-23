@@ -1,5 +1,5 @@
 export interface IFilters {
-  wbRating: number | null,
+  wbRating: string | number | null,
   minReviewsCount: number | null,
   maxReviewsCount: number | null,
 }

@@ -1,4 +1,4 @@
 export interface ISorting {
-  field: string | null;
+  field: 'name' | 'brandName' | 'wbRating' | 'reviewsCount';
   type: 'asc' | 'desc';
 }
