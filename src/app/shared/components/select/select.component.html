@@ -1,0 +1,16 @@
+<div class='wrap' (click)='toggle()'>
+  <span class='value' [class.placeholder]='value === undefined || value === null'>{{renderValue()}}</span>
+  <i class='icon-down-arrow'></i>
+</div>
+<ul *ngIf='focused' class='dropdown' @dropdown>
+  <ng-container *ngFor='let option of options'>
+    <li
+      *ngIf='value !== option.id'
+      class='option'
+      [class.active]='value === option.id'
+      (click)='select(option.id)'
+    >
+      {{option.name}}
+    </li>
+  </ng-container>
+</ul>

@@ -1,0 +1,15 @@
+@use 'src/styles/variables';
+
+@function response($s-min, $s-max, $w-min, $w-max, $unit: rem) {
+  $html-font-size: variables.$html-font-size / 1px;
+  $k: ($s-max - $s-min) * $html-font-size / ($w-max - $w-min);
+  $f: $s-min * $html-font-size - $k * $w-min;
+
+  @if $unit == rem {
+    $f: $f / $html-font-size * 1rem;
+  } @else {
+    $f: $f * 1px;
+  }
+
+  @return calc(#{$k} * 100vw + #{$f});
+}

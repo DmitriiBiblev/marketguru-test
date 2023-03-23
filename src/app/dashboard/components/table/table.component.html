@@ -1,0 +1,16 @@
+<div
+  *ngFor='let title of titles; let last = last'
+  class='cell header'
+  [class.right]='last'
+>
+  {{title}}
+</div>
+<ng-container *ngFor='let seller of sellers'>
+  <div
+    *ngFor='let cell of cells; let last = last'
+    class='cell'
+    [class.right]='last'
+  >
+    {{seller[cell]}}
+  </div>
+</ng-container>
