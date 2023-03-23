@@ -1,0 +1,8 @@
+<div *ngIf='labelChildren?.length' class='label'>
+  <ng-content select='app-label'></ng-content>
+</div>
+<div class='wrapper' (click)='control.onContainerClick && control.onContainerClick($event)'>
+  <div class='infix'>
+    <ng-content></ng-content>
+  </div>
+</div>

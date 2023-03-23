@@ -1,0 +1,30 @@
+<h2>Фильтры</h2>
+<form class='form' [formGroup]='form' (ngSubmit)='handleSubmit()'>
+  <app-form-field>
+    <app-label>Рейтинг Wildberries</app-label>
+    <app-select
+      formControlName='wbRating'
+      [options]='ratings'
+      placeholder='Выберите значение...'
+    ></app-select>
+  </app-form-field>
+  <app-form-field>
+    <app-label>Минимальное количество просмотров</app-label>
+    <input
+      app-input
+      formControlName='minReviewsCount'
+      type='number'
+      placeholder='Введите значение...'
+    >
+  </app-form-field>
+  <app-form-field>
+    <app-label>Максимальное количество просмотров</app-label>
+    <input
+      app-input
+      formControlName='maxReviewsCount'
+      type='number'
+      placeholder='Введите значение...'
+    >
+  </app-form-field>
+  <button>Применить</button>
+</form>

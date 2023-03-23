@@ -1,0 +1,13 @@
+.app-input {
+  width: 100%;
+  height: auto;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: var(--color-4);
+  border: 0;
+  outline: none;
+
+  &::placeholder {
+    color: var(--color-3);
+  }
+}

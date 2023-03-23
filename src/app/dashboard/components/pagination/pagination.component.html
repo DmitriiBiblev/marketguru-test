@@ -1,0 +1,15 @@
+<button
+  [disabled]='currentPage === 1'
+  (click)='onChangePage.emit(currentPage! - 1)'
+>
+  Предыдущая
+</button>
+<span class='page'>
+  {{currentPage}}
+</span>
+<button
+  [disabled]='currentPage === maxPages'
+  (click)='onChangePage.emit(currentPage! + 1)'
+>
+  Следующая
+</button>

@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/fonts';
+@use 'styles/helpers';
+@use 'styles/variables';
+@use 'styles/functions';
+
+:root {
+  --font-family: #{variables.$font-family};
+  --html-font-size: #{variables.$html-font-size};
+  --color-1: #{variables.$color-1};
+  --color-2: #{variables.$color-2};
+  --color-3: #{variables.$color-3};
+  --color-4: #{variables.$color-4};
+  --color-5: #{variables.$color-5};
+  --color-6: #{variables.$color-6};
+  --color-7: #{variables.$color-7};
+  --color-8: #{variables.$color-8};
+}
+
+html {
+  font-family: var(--primary-font-family);
+  font-size: var(--html-font-size);
+}
+
+app-root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 0 1fr;
+}
+
+* {
+  font-family: var(--font-family);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-size: 2.4rem;
+  display: inline-block;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-8);
+  background-size: cover;
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: var(--color-1);
+}
+
+button {
+  font-size: 1.6rem;
+  color: var(--color-1);
+  padding: .8rem 2.4rem;
+  background: var(--color-6);
+  border-radius: 2.4rem;
+  transition: background .2s, opacity .2s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:active {
+    background: var(--color-5);
+    opacity: 1;
+  }
+
+  &:disabled {
+    background: var(--color-6);
+    opacity: .3;
+    cursor: default;
+  }
+}

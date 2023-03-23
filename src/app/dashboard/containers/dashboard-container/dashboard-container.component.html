@@ -1,0 +1,13 @@
+<div class='sidebar'>
+  <app-filters (onSetFilters)='handleSetFilers($event)'></app-filters>
+  <app-sorting (onSetSorting)='handleSetSorting($event)'></app-sorting>
+</div>
+<div class='content'>
+  <h2>Данные</h2>
+  <app-table [sellers]='sellers$ | async'></app-table>
+  <app-pagination
+    [currentPage]='currentPage$ | async'
+    [maxPages]='maxPages$ | async'
+    (onChangePage)='handleChangePage($event)'
+  ></app-pagination>
+</div>
